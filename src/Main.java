@@ -115,16 +115,16 @@ public class Main {
         System.out.println(staff9);
         System.out.println(staff10);
 
-        employee[0]=staff1;
-        employee[1]=staff2;
-        employee[2]=staff3;
-        employee[3]=staff4;
-        employee[4]=staff5;
-        employee[5]=staff6;
-        employee[6]=staff7;
-        employee[7]=staff8;
-        employee[8]=staff9;
-        employee[9]=staff10;
+        employee[0] = staff1;
+        employee[1] = staff2;
+        employee[2] = staff3;
+        employee[3] = staff4;
+        employee[4] = staff5;
+        employee[5] = staff6;
+        employee[6] = staff7;
+        employee[7] = staff8;
+        employee[8] = staff9;
+        employee[9] = staff10;
 
     }
 
