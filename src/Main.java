@@ -1,12 +1,12 @@
 public class Main {
 
-    public static Employee[] employee = new Employee[10];
-    public static double indexPercent = 1.57d;
+    private static Employee[] employee = new Employee[10];
+    private static double indexPercent = 1.57d;
 
     public static void main(String[] args) {
         employee[0] = new Employee("Smirnov I.S", 1, 10);
         employee[1] = new Employee("Pilitckiy S.O", 1, 20);
-        employee[2] = new Employee("Arhipenkova D.S", 2, 30);
+        employee[2] = new Employee("Arhipenkova D.S", 2, 300);
         employee[3] = new Employee("Platonov I.V", 2, 40);
         employee[4] = new Employee("Heruvimov A.A", 3, 50);
         employee[5] = new Employee("Dronova D.A", 3, 60);
@@ -16,20 +16,18 @@ public class Main {
         employee[9] = new Employee("Kirilinko F.D", 5, 100);
         printAllEmployees();
         System.out.println("month sum salary " + monthSumSalary());
-        System.out.println("min salary staff " + minSalary());
-        System.out.println("max salary staff " + maxSalary());
+        System.out.println("min salary staff " + minSalaryEmployee());
+        System.out.println("max salary staff " + maxSalaryEmployee());
         System.out.println("average salary " + averageSalary());
         printAllFullName();
         System.out.println("index salary work");
         indexAllSalary();
-        //after index
         printAllEmployees();
     }
     public static void indexAllSalary() {
         for (int i = 0; i < employee.length; i++){
-            int currentSalary = employee[i].getSalaryOfStaff();
-            double indexSalary;
-            indexSalary= currentSalary * indexPercent;
+            double currentSalary = employee[i].getSalaryOfStaff();
+            double indexSalary = currentSalary * indexPercent;
             employee[i].setSalaryOfStaff((int) indexSalary);
         }
     }
@@ -42,27 +40,27 @@ public class Main {
     }
 
     private static int averageSalary() {
-        int average;
-        int allCash = monthSumSalary();
-        average = allCash / employee.length;
-        return average;
+        double allCash = monthSumSalary();
+        double average = allCash / employee.length;
+        return (int) average;
     }
 
-    private static int maxSalary() {
-        int max = Integer.MIN_VALUE;
-        for (int i = 0; i < employee.length; i++) {
-            if (max < employee[i].getSalaryOfStaff()) {
-                max = employee[i].getSalaryOfStaff();
+
+        public static Employee maxSalaryEmployee() {
+            Employee max = employee[0];
+            for (int i = 0; i < employee.length; i++) {
+                if (employee[i].getSalaryOfStaff() > max.getSalaryOfStaff()) {
+                    max = employee[i];
+                }
             }
+            return max;
         }
-        return max;
-    }
 
-    private static int minSalary() {
-        int min = Integer.MAX_VALUE;
+    public static Employee minSalaryEmployee() {
+        Employee min = employee[0];
         for (int i = 0; i < employee.length; i++) {
-            if (min > employee[i].getSalaryOfStaff()) {
-                min = employee[i].getSalaryOfStaff();
+            if (employee[i].getSalaryOfStaff() < min.getSalaryOfStaff()) {
+                min = employee[i];
             }
         }
         return min;

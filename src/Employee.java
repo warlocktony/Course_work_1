@@ -3,7 +3,7 @@ public class Employee {
 
     private String fullName;
     private int department;
-    private int salaryOfStaff;
+    private double salaryOfStaff;
     private int id;
     private static int idCounter = 1;
 
@@ -33,7 +33,7 @@ public class Employee {
         this.department = department;
     }
 
-    public int getSalaryOfStaff() {
+    public double getSalaryOfStaff() {
         return salaryOfStaff;
     }
 
