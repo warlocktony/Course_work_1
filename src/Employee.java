@@ -37,7 +37,7 @@ public class Employee {
         return salaryOfStaff;
     }
 
-    public void setSalaryOfStaff(int salaryOfStaff) {
+    public void setSalaryOfStaff(double salaryOfStaff) {
         this.salaryOfStaff = salaryOfStaff;
     }
 

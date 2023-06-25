@@ -39,10 +39,10 @@ public class Main {
 
     }
 
-    private static int averageSalary() {
+    private static double averageSalary() {
         double allCash = monthSumSalary();
         double average = allCash / employee.length;
-        return (int) average;
+        return average;
     }
 
 
@@ -66,8 +66,8 @@ public class Main {
         return min;
     }
 
-    public static int monthSumSalary() {
-        int allCash = 0;
+    public static double monthSumSalary() {
+        double allCash = 0;
         for (int i = 0; i < employee.length; i++) {
             allCash += employee[i].getSalaryOfStaff();
         }
